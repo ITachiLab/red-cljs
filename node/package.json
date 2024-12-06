@@ -1,0 +1,24 @@
+{
+  "name": "red-cljs",
+  "version": "1.0.0",
+  "author": "Itachi",
+  "description": "A template for Node-RED nodes implemented in ClojureScript.",
+  "license": "MIT",
+  "homepage": "https://github.com/ITachiLab/red-cljs",
+  "main": "red-cljs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ITachiLab/red-cljs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ITachiLab/red-cljs/issues"
+  },
+  "node-red": {
+    "nodes": {
+      "red-cljs": "red-cljs.js"
+    }
+  }
+}
