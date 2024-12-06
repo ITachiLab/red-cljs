@@ -1,0 +1,6 @@
+;; shadow-cljs configuration
+{:source-paths ["src"]
+ :dependencies []
+ :builds       {:node {:target      :node-library
+                       :output-to   "node/red-cljs.js"
+                       :exports-var red-cljs.core/node}}}
