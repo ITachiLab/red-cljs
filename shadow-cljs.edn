@@ -1,6 +1,10 @@
 ;; shadow-cljs configuration
 {:source-paths ["src"]
  :dependencies []
- :builds       {:node {:target      :node-library
-                       :output-to   "node/red-cljs.js"
-                       :exports-var red-cljs.core/node}}}
+ :builds       {:node {:target           :node-library
+                       :output-to        "red-cljs.js"
+                       :exports-var      red-cljs.core/main
+                       :release          {:output-to   "release/red-cljs.js"
+                                          :build-hooks [(shadow.html/copy-file "package.json" "release/package.json")
+                                                        (shadow.html/copy-file "red-cljs.html" "release/red-cljs.html")]}
+                       :compiler-options {:output-feature-set :es-next}}}}
