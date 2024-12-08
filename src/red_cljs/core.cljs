@@ -1,12 +1,12 @@
 (ns red-cljs.core)
 
-(defn onInput [msg node]
+(defn onInput [^js msg node]
   (set! (.-payload msg) (.. msg -payload toLowerCase))
   (.send node msg))
 
-(defn node [red]
+(defn main [^js red]
   (defn CljsTemplate [config]
-    (this-as node
+    (this-as ^js node
       (.. red -nodes (createNode node config))
       (.on node "input" #(onInput % node))))
 
